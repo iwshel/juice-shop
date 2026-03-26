@@ -8,7 +8,7 @@ import { type Request, type Response } from 'express'
 import { challenges } from '../data/datacache'
 import * as security from '../lib/insecurity'
 
-// fields= раньше шёл в user.data[field] — можно было дернуть чужие ключи
+// fields= раньше шёл в user.data[field] — можно было дернуть любые ключи (например, password)
 // добавили whitelist с колонками User из models/user.ts
 const user_profile_field_allowlist = new Set([
   'id',
